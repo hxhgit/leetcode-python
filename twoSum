@@ -1,0 +1,11 @@
+    def twoSum( num, target):
+        
+        m={}
+        for i in range(len(num)):            
+            #n = m.get(num[i])
+            #if n==None :
+            m[num[i]]=i
+            n = m.get(target-num[i])
+            if n !=None and n < i:
+                return (n+1, i+1)
+                
